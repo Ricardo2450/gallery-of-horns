@@ -10,3 +10,7 @@ Card.Img {
   max-width: 15rem;
 
 } */
+
+.selectedImage {
+width: 100%;
+}
