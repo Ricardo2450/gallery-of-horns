@@ -8,16 +8,17 @@ class SelectedBeast extends React.Component {
     return (
       <>
         <Modal
-          show={this.props.isModalShown}
-          onHide={this.props.handleCloseModal}
+          show={this.props.isModelShown}
+          onHide={this.props.handleCloseModel}
           className='modal'>
           
           
           <Modal.Header closeButton>
-            <Modal.Title id='contained-modal-title-vcenter'
+            <Modal.Title id='beastTitle'
             className='selectedTitle'>
               {this.props.title}</Modal.Title>
           </Modal.Header>
+         
           <Modal.Body>
             <div className='pictureDiv'>
             <img
@@ -27,8 +28,9 @@ class SelectedBeast extends React.Component {
             </div>
             <p className='selectedDescription'>{this.props.description}</p>
             </Modal.Body>
+          
           <Modal.Footer>
-            <Button onClick={this.props.handleCloseModal}>
+            <Button onClick={this.props.handleCloseModel}>
               Close
             </Button>
           </Modal.Footer>
