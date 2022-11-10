@@ -1,15 +1,15 @@
 
 
 
-Number and name of feature: ________________________________
+Number and name of feature: Lab 2
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 6 hours
 
-Start time: _____
+Start time: 2pm
 
-Finish time: _____
+Finish time: 5:30 pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3 hours and 30 minutes.
 
 
 Number and name of feature: Lab 3
@@ -20,4 +20,8 @@ Start time: 900pm
 
 Finish time: 1215am
 
-Actual time needed to complete: TBD
+Redo start time: 3 pm
+
+Redo Finish time: 4:26 pm
+
+Actual time needed to complete: 4 hours and 30 minutes.
