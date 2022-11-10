@@ -3,11 +3,10 @@ import Header from './Header.js';
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import SelectedBeast from "./SelectedBeast.js";
-// import Modal from 'react-bootstrap/Modal';
 import data from './data.json';
 import './App.css';
-import { ListGroup } from "react-bootstrap";
-import { render } from "@testing-library/react";
+// import { ListGroup } from "react-bootstrap";
+// import { render } from "@testing-library/react";
 
 class App extends React.Component {
 
