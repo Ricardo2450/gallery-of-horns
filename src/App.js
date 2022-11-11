@@ -1,12 +1,11 @@
 import React from "react";
+import Form from 'react-bootstrap/Form';
 import Header from './Header.js';
 import Main from "./Main.js";
 import Footer from "./Footer.js";
 import SelectedBeast from "./SelectedBeast.js";
 import data from './data.json';
 import './App.css';
-// import { ListGroup } from "react-bootstrap";
-// import { render } from "@testing-library/react";
 
 class App extends React.Component {
 
@@ -18,8 +17,10 @@ class App extends React.Component {
       selectedTitle: "",
       selectedImageUrl: "",
       selectedDescription: "",
-    }
-  }
+      hornNum: 'All',
+      beastData:data,
+    };
+  };
 
   addHearts = () => {
     this.setState({
@@ -42,6 +43,22 @@ class App extends React.Component {
     });
   };
 
+  handleFilterSelect = (event) => {
+    let hornNum = event.target.value;
+    console.log(hornNum);
+    let newData;
+    hornNum === 'All' ? newData = data : newData = data.filter(obj => obj.horns === parseInt(hornNum));
+    this.setState({
+      beastData: newData
+    });
+  };
+
+  filterDropDown = () => {
+    let uniqueHorns= data.map(item => item.horns).filter((value,index,array) => array.indexOf(value) === index).sort((a,b) => a - b);
+    return uniqueHorns.map((horn, idx) => {
+      return <option value={horn} key={idx}>{horn}</option>
+    });
+  };
 
 
 
@@ -51,10 +68,17 @@ class App extends React.Component {
         <Header
           hearts={this.state.hearts}
         />
+        <Form id='form'>
+        <Form.Label>Filter by number of Horns</Form.Label>
+        <Form.Select onChange={this.handleFilterSelect}>
+          <option>All</option>
+          {this.filterDropDown()}
+        </Form.Select>
+      </Form>
         <Main
           addHearts={this.addHearts}
           handleOpenModel={this.handleOpenModel}
-          data={data}
+          data={this.state.beastData}
         />
         <Footer />
         <SelectedBeast
@@ -83,7 +107,7 @@ export default App;
 
 
 
-
+// let data ={data}
 
 
 
