@@ -25,17 +25,6 @@ class HornedBeast extends React.Component {
     
   // };
 
-// needsHelp = () => {
-//   this.state({
-//     helpMe: true
-// });
-// };
-
-// wasHelped = () => {
-//   this.setState({
-//     helpMe: false,
-//   });
-// };
 
 render() {
   return (
@@ -44,8 +33,8 @@ render() {
         <Card.Img 
           src={this.props.image_url}
           onClick={() => {
-            this.props.handleGreeting();
-            this.props.handleOpenModal(this.props.title, this.props.imageUrl, this.props.description);
+            // this.props.handleGreeting();
+            this.props.handleOpenModel(this.props.title, this.props.image_url, this.props.description);
           }}
           alt={this.props.title}
         />
